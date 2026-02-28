@@ -9,9 +9,10 @@ int main() {
   char Estado[2] , cidade[50];
   char codigo[50];
   int População , turisticos;
-  float area , pib;
+  float area;
+  float pib;
 
-  // Área para entrada de dados
+  // Área para entrada de dados da carta 1
   printf ("Insira os dados da carta 1\n");
 
   printf ("Estado: ", Estado);
@@ -29,12 +30,35 @@ int main() {
   printf("Área: " , area);
   scanf ("%f " , &area);
 
-  printf("PIB: " , pib);
+  printf("PIB:\n" , pib);
   scanf ("%f" , &pib);
 
-  printf ("Pontos Turísticos:\n " , turisticos);
+  printf ("Pontos Turísticos:" , turisticos);
   scanf ("%d" , &turisticos);
 
+ // Área para entrada de dados da carta 2
+  printf ("Insira os dados da carta 2\n");
+
+  printf ("Estado: ", Estado);
+  scanf ("%s" , &Estado);
+
+  printf ("Código: " , codigo);
+  scanf ("%s" , &codigo);
+
+  printf ("Nome: " , cidade);
+  scanf ("%s" , &cidade);
+
+  printf ("População: " , População);
+  scanf ("%d" , &População);
+
+  printf("Área: " , area);
+  scanf ("%f " , &area);
+  
+  printf("PIB:\n" , pib);
+  scanf ("%f" , &pib);
+
+  printf ("Pontos Turísticos:" , turisticos);
+  scanf ("%d" , &turisticos);
 
   // Área para exibição dos dados da cidade
   printf ("== CARTA 1 ==\n");
@@ -42,10 +66,18 @@ int main() {
   printf ("Código:%s\n" , codigo);
   printf ("Nome::%s\n" , cidade);
   printf ("População:%d\n" , População);
-  printf ("Área:%f " , area);
-  printf ("PIB:%F" , pib);
-  printf ("Pontos Turísticos:%d" , turisticos);
+  printf ("Área:%f\n " , area);
+  printf ("PIB:%f\n" , pib);
+  printf ("Pontos Turísticos:%d\n" , turisticos);
 
+  printf ("== CARTA 2 ==\n");
+  printf ("Estado:%s\n" , Estado);
+  printf ("Código:%s\n" , codigo);
+  printf ("Nome::%s\n" , cidade);
+  printf ("População:%d\n" , População);
+  printf ("Área:%f\n " , area);
+  printf ("PIB:%f\n" , pib);
+  printf ("Pontos Turísticos:%d" , turisticos);
 
 
 return 0;
