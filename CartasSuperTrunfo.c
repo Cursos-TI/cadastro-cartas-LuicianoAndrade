@@ -12,11 +12,8 @@ int main() {
   float area1 , area2;
   float pib1 ,pib2;
   float densidade1 , densidade2 , percapita1 , percapita2;
+  float superpoder1 , superpoder2;
    
-  densidade1 = População1 / area1;
-  densidade2 = populacao2 / area2;
-  percapita1 = pib1 / População1;
-  percapita2 = pib2 / populacao2;
 
   // Área para entrada de dados da carta 1
   printf ("Insira os dados da carta 1\n");
@@ -42,9 +39,14 @@ int main() {
   printf ("Pontos Turísticos: " , turisticos1);
   scanf ("%d" , &turisticos1);
 
+  // CALCULO DENSIDADE E PER CAPITA 1
   densidade1 = População1 / area1;
  
   percapita1 = pib1 / População1;
+
+  // SUPER PODER 1
+
+  superpoder1 = ((float)População1 + area1 + pib1 + (float)turisticos1 +(1/densidade1));
 
  // Área para entrada de dados da carta 2
   printf ("Insira os dados da carta 2\n");
@@ -70,9 +72,15 @@ int main() {
   printf ("Pontos Turísticos: " , turisticos2);
   scanf ("%d" , &turisticos2);
 
+  // CALCULO DENSIDADE E PER CAPITA 2
+
   densidade2 = populacao2 / area2;
  
   percapita2 = pib2 / populacao2;
+
+  // SUPER PODER 2
+
+  superpoder2 = ((float)populacao2 + area2 + pib2 + (float)turisticos2 +(1/densidade2));
 
   // Área para exibição dos dados da cidade 1
   printf ("== CARTA 1 ==\n");
@@ -85,6 +93,7 @@ int main() {
   printf ("Pontos Turísticos:%d\n" , turisticos1);
   printf ("Densidade:%f\n" , densidade1);
   printf ("PIB per CAPITA:%f\n" , percapita1);
+  printf ("Super Poder 1:%2.f\n" , superpoder1); 
 
   // Área para exibição dos dados da cidade 2
   printf ("== CARTA 2 ==\n");
@@ -94,9 +103,10 @@ int main() {
   printf ("População:%d\n" , populacao2);
   printf ("Área:%f\n" , area2);
   printf ("PIB:%f\n" , pib2);
-  printf ("Pontos Turísticos:%d" , turisticos2);
+  printf ("Pontos Turísticos:%d\n" , turisticos2);
   printf ("Densidade:%f\n" , densidade2);
   printf ("PIB per CAPITA:%f\n" , percapita2);
+  printf ("Super Poder 2:%2.f" , superpoder2); 
 
 
 return 0;
