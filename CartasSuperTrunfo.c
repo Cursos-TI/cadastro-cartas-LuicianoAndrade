@@ -122,5 +122,21 @@ int main() {
   printf ("Super Poder:%d\n",superpoder1 > superpoder2);
 
 
+
+   // COMPARAÇÃO DAS CARTAS ESCOLHIDAS  
+    printf ("=======COMPARAÇÃO DE CARTAS(ATRIBUTO POPULÇÃO)======\n");
+    printf ("Carta 1- %s : %d\n" , cidade1 , População1);
+    printf ("Carta 2- %s : %d\n" , cidade2 , populacao2);
+    // estrutura de comparação
+    if (População1 > populacao2){
+
+        printf ("A carta 1- %s venceu!!" , cidade1);
+    }else {
+
+        printf ("A carta 2 - %s venceu!!" , cidade2);
+        }
+
+
+
 return 0;
 } 
