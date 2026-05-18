@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
@@ -9,7 +10,7 @@ int main() {
   char Estado1[2], estado2 [2], cidade1[50], cidade2[50];
   char codigo1[5] , codigo2[5];
   unsigned int População1 ,populacao2;
-  int turisticos1 , turisticos2;
+  int turisticos1 , turisticos2 , opcao;
   float area1 , area2;
   float pib1 ,pib2;
   float densidade1 , densidade2 , percapita1 , percapita2;
@@ -111,30 +112,67 @@ int main() {
   
   // comparação das cartas
   printf ("========COMPARAÇÃO DAS CARTAS========\n");
-  printf ("CARTA 1 VENCE SE SAIR 1\n");
-  printf ("CARTA 2 VENCE SE SAIR 0\n");
-  printf ("População:%u\n",População1 > populacao2);
-  printf ("Área:%d\n",area1 > area2);
-  printf ("PIB:%d\n",pib1 > pib2);
-  printf ("Pontos Turísticos:%d\n",turisticos1 > turisticos2);
-  printf ("Densidade Populacional:%d\n", densidade1 < densidade2);
-  printf ("PIB per CAPITA:%d\n",percapita1 > percapita2);
-  printf ("Super Poder:%d\n",superpoder1 > superpoder2);
+   
+  printf("ESCOLHA UM ATRIBUTO PARA SER COMPARADO");
+  printf("1. POPULAÇÃO");
+  printf("2. ÁREA");
+  printf("3. POPULAÇÃO");
+  printf("4. PONTOS TURÍSTICOS");
+  printf("5. DENSIDADE POPULACIONAL");
+  printf("6. PIB PER CAPITA");
+  printf("7. SUPER PODER");
+  printf("ESCOLHA UMA DAS OPÇÕES ACIMA:" , opcao);
+  scanf ("%d" , &opcao);
 
+
+  switch (opcao)
+  {
+    case 1:
+      printf("ATRIBUTO POPULÇÃO");
+      if (População1 > populacao2){
+
+       printf("CARTA 1 VENCEU")
+
+      } else if (População1 < populacao2)
+
+       printf ("CARTA 2 VENCEU")
+
+      {
+        else:
+       printf ("EMPATE")
+      }
+      
+      
+
+     break;
+
+    case 2:
+
+     break;
+    case 3:
+
+     break;
+    case 4:
+
+     break;
+    case 5:
+
+     break;
+    case 6:
+
+     break;
+    case 7:
+
+   break;
+
+  default:
+    printf("OPÇÃO INVÁLIDA");
+    break;
+  }
 
 
    // COMPARAÇÃO DAS CARTAS ESCOLHIDAS  
-    printf ("=======COMPARAÇÃO DE CARTAS(ATRIBUTO POPULÇÃO)======\n");
-    printf ("Carta 1- %s : %d\n" , cidade1 , População1);
-    printf ("Carta 2- %s : %d\n" , cidade2 , populacao2);
-    // estrutura de comparação
-    if (População1 > populacao2){
-
-        printf ("A carta 1- %s venceu!!" , cidade1);
-    }else {
-
-        printf ("A carta 2 - %s venceu!!" , cidade2);
-        }
+   
 
 
 
